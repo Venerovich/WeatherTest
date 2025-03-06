@@ -1,0 +1,124 @@
+$primary-font-color: white;
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: 'Geologica', Roman;
+  font-size: 10px;
+  line-height: 10px;
+  color: $primary-font-color;
+}
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  background: linear-gradient(116.21deg, #052652 -3.25%, #2d9cdb 107.37%);
+  box-sizing: border-box;
+  padding: 40px;
+  @media (max-width: 1024px) {
+    padding: 15px;
+    gap: 32px;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 756px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+main {
+  flex: 1;
+}
+
+.popular {
+  margin-top: auto;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 3px;
+  font-size: clamp(1.6rem, 1.171rem + 1.143vw, 2.2rem);
+  line-height: 2.64rem;
+  font-weight: 500;
+  color: $primary-font-color;
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: $primary-font-color;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 2.2rem;
+  line-height: 2.64rem;
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+span {
+  font-size: clamp(1.4rem, 1.114rem + 0.762vw, 1.8rem);
+  line-height: 2.16rem;
+  font-weight: 400;
+}
+h1 {
+  font-size: clamp(2.6rem, 1.886rem + 1.905vw, 3.6rem);
+  line-height: 4.68rem;
+  font-weight: 600;
+}
+p {
+  font-size: clamp(1.4rem, 1.114rem + 0.762vw, 1.8rem);
+  line-height: 2.88rem;
+}
+
+.page-description {
+  opacity: 0.6;
+  font-weight: 500;
+  line-height: 3.6rem;
+  margin-bottom: 16px;
+  font-size: clamp(1.8rem, 0.943rem + 2.286vw, 3rem);
+}
