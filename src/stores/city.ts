@@ -3,9 +3,14 @@ import IconRain from '@/components/icons/IconRain.vue'
 import IconCloudy from '@/components/icons/IconCloudy.vue'
 import IconSun from '@/components/icons/IconSun.vue'
 import IconWind from '@/components/icons/IconWind.vue'
-
+import type { City } from '@/types/CitiesTypes'
+type StateTypes = {
+  city: City,
+  cities: City[]
+}
 export const useCityStore = defineStore('city', {
-  state: () => ({
+
+  state: <StateTypes>() => ({
     city: {
       id: 1,
       name: 'Краснодар',
@@ -566,7 +571,7 @@ export const useCityStore = defineStore('city', {
     ],
   }),
   actions: {
-    setCity(city) {
+    setCity(city: City) {
       this.city = city
     },
   },

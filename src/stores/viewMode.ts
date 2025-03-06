@@ -2,10 +2,10 @@ import { defineStore } from 'pinia'
 
 export const useModeStore = defineStore('mode', {
   state: () => ({
-    mode: 'day',
+    mode: 'day' as string,
   }),
   actions: {
-    setMode(mode) {
+    setMode(mode: string) {
       this.mode = mode
     },
   },
